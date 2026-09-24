@@ -1,0 +1,25 @@
+# Local environments and tooling
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+.DS_Store
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+.modal.toml
+*.pem
+# Generated corpora, checkpoints, evaluations and runtime state
+/data/
+/runs/
+/reports/
+/releases/
+*.log
+*.safetensors
+*.pt
+*.bin

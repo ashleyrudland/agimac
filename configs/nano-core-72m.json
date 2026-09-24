@@ -1,0 +1,11 @@
+{
+  "vocab_size": 16392,
+  "dim": 640,
+  "layers": 12,
+  "heads": 10,
+  "kv_heads": 2,
+  "hidden_dim": 2560,
+  "context": 2048,
+  "rope_base": 100000.0,
+  "architecture": "nano_core"
+}

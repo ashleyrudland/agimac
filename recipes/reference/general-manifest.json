@@ -1,0 +1,102 @@
+{
+  "vocab_size": 16392,
+  "tokenizer_sha256": "d9512ae8928ce3e5bdf72e00f8618601974bab0afadb8fc08c09354f2327b187",
+  "source_sha256": "a38e59d79c738085bfc85ce932e72159ed49e033c3facee32b2c23268043e553",
+  "sources": {
+    "fineweb": {
+      "source": "fineweb",
+      "documents": {
+        "train": 39672,
+        "valid": 735
+      },
+      "characters": {
+        "train": 180003833,
+        "valid": 3306714
+      },
+      "overlap_rejections": 32,
+      "sha256": "0224a5178dabd039ee5b9eb9c6909b3d9561d48bbc4c4e1963cd62a2f86e5c60",
+      "bounded_prefix": true
+    },
+    "cosmopedia": {
+      "source": "cosmopedia",
+      "documents": {
+        "train": 40154,
+        "valid": 853
+      },
+      "characters": {
+        "train": 150001688,
+        "valid": 3190385
+      },
+      "overlap_rejections": 8,
+      "sha256": "67f8950af07c2e526bcdef4c35ed8949e0878621e80d9bd5eb81838b28b2a3e6",
+      "bounded_prefix": true
+    },
+    "python": {
+      "source": "python",
+      "documents": {
+        "train": 10339,
+        "valid": 234
+      },
+      "characters": {
+        "train": 90012040,
+        "valid": 2036895
+      },
+      "overlap_rejections": 46,
+      "sha256": "3444c6267863fd4ed74c069119dab46226aae63eefd474c75e731630be38849d",
+      "bounded_prefix": true
+    },
+    "stories": {
+      "source": "stories",
+      "documents": {
+        "train": 49036,
+        "valid": 964
+      },
+      "characters": {
+        "train": 39436770,
+        "valid": 749560
+      },
+      "overlap_rejections": 0,
+      "sha256": "fd644426735dca4911eeec0bb45246136fb6ff66b0565fddac4ace31ad7a7fa8",
+      "bounded_prefix": true
+    }
+  },
+  "tokens": {
+    "train": 80000000,
+    "valid": 400000
+  },
+  "tokens_by_source": {
+    "fineweb": {
+      "train": 32000000,
+      "valid": 100000
+    },
+    "cosmopedia": {
+      "train": 24000000,
+      "valid": 100000
+    },
+    "python": {
+      "train": 16000000,
+      "valid": 100000
+    },
+    "stories": {
+      "train": 8000000,
+      "valid": 100000
+    }
+  },
+  "dtype": "<u4",
+  "fim_rate": 0,
+  "train_sha256": "6907344bf9c1d7491c7c5b622ec1d0eaee6fff7f08f2b42baa41fd6c685fd3ad",
+  "valid_sha256": "9d3db40158b5ae3423b63daf6ef18bb271a55ceec1d4348249cd37399b9b14e2",
+  "split": "2% hash groups: website host / seed prompt / code repository / story hash",
+  "decontamination": "exact document dedup; HumanEval/MBPP 13-word overlap filter; NOT full near-duplicate decontamination",
+  "benchmark_filter_sha256": "f558339b1eafceeacc3397edcfb717d6220c86b61e6aaac837f979ca12e01371",
+  "chat_specials": [
+    "<|system|>",
+    "<|user|>",
+    "<|assistant|>",
+    "<|tool|>",
+    "<|end_turn|>",
+    "<|tool_call|>",
+    "<|end_call|>",
+    "<|tool_result|>"
+  ]
+}

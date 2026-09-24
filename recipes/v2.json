@@ -1,0 +1,57 @@
+{
+  "name": "agimac-v2-145m",
+  "parameters": 144979968,
+  "initialization": "random weights; no pretrained external weights",
+  "training_tokens": 11000000512,
+  "corpus_tokens": 2000000000,
+  "mixture": {
+    "fineweb": 0.4,
+    "cosmopedia": 0.3,
+    "python": 0.2,
+    "stories": 0.1
+  },
+  "sequence": 512,
+  "context_limit": 2048,
+  "batch_size": 8,
+  "dtype": "bfloat16",
+  "master_weights": "float32",
+  "compiled_full_update": true,
+  "optimizer": "AdamW",
+  "learning_rate": 0.0003,
+  "warmup_steps": 2000,
+  "checkpoint_every_steps": 10000,
+  "keep_last": 3,
+  "sft": {
+    "data": "data/sft-v1",
+    "epochs": 1,
+    "batch_size": 4,
+    "learning_rate": 5e-05,
+    "tools": [
+      "add",
+      "subtract",
+      "multiply",
+      "divide"
+    ]
+  },
+  "tokenizer_sha256": "d9512ae8928ce3e5bdf72e00f8618601974bab0afadb8fc08c09354f2327b187",
+  "input_hashes": {
+    "configs/nano-core-145m.json": "92396dbce50f84d3b30adbab9bcc1cbc5a357aaaeab2f20fe3b06b09baafbd11",
+    "recipes/reference/tokenizer.json": "d9512ae8928ce3e5bdf72e00f8618601974bab0afadb8fc08c09354f2327b187",
+    "data/sft-v1/manifest.json": "f60006b6fa0d7ea564b367edf096e5d609ef457943359cf6124fbf1b4cd681eb",
+    "src/macoder/model.py": "bd0606bec468ddcf58191603cf70dacf98ffa6a4f0deb139c3892a702c729547",
+    "src/macoder/train.py": "9e58b83ed5b2e961f0cef0938bb7d7df7d7b4e64b7461e457a1a31ce50cad969",
+    "src/macoder/sft.py": "84f80c1d26d1edfeecbea308312eb1b729caeca403dc0ad9036119e4bb4f003a",
+    "src/macoder/conversation.py": "a2ea0303e527b421c8248046ac0d24ab14bc8b81904e625d5d97ad464b8fcaca",
+    "experiments/prepare_general.py": "2873b7a2e267e50b988e6bb0e19d042de7eb7851139155c224bb787e8c22ea3c",
+    "experiments/prepare_v2.py": "734589cff4fd363d752cff3834c8af37cb003198b89dd6305f08f0ec14f4f34e"
+  },
+  "notes": [
+    "11B processed tokens is approximately 5.5 passes worth of a 2B corpus, sampled as random packed windows.",
+    "No measured new-model benchmark quality yet; token count does not guarantee GPT-2 quality.",
+    "Code source metadata filtered to named permissive licenses; this is not a per-file legal audit.",
+    "Existing CORE evaluations finish before long GPU training starts."
+  ],
+  "prelaunch_changes": [
+    "Before any v2 training, restricted benchmark-filter input to configured CORE tasks: an unused narrative_qa auxiliary file in upstream bundle contains malformed JSON. Configured CORE files all parse."
+  ]
+}

@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "agimac"
+version = "0.1.0"
+description = "A small coding language model built from scratch for Apple silicon"
+requires-python = ">=3.11"
+dependencies = ["mlx>=0.31,<0.33; sys_platform == 'darwin' and platform_machine == 'arm64'", "numpy>=2,<3", "tokenizers>=0.22,<0.24", "rich>=13,<15"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "ruff>=0.12,<1",
+]
+cloud = ["modal==1.5.5", "torch==2.8.0", "safetensors==0.6.2"]
+eval = ["jinja2>=3.1,<4", "pyyaml>=6,<7", "huggingface-hub>=0.30", "pyarrow>=18"]
+data = [
+    "huggingface-hub>=0.30",
+    "pyarrow>=18",
+]
+
+[project.scripts]
+agimac = "macoder.cli:main"
+macoder = "macoder.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/macoder"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+# These two data builders are byte-pinned by the historical cloud recipe.
+extend-exclude = ["experiments/prepare_general.py", "experiments/prepare_sft.py"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/test_backend_parity.py" = ["E402"] # Optional torch import must skip before backend imports.

@@ -1,0 +1,135 @@
+{
+  "pretrain_identity": {
+    "train.bin": "fbe738446bb0732d3f1ab64a442276f5e5cdcfacb0d15d45cd0762f132b4a717",
+    "valid.bin": "a16546f1060e33f8f85b95cab84583348af4a82ca01144401d5bb35c1eadc0e5",
+    "tokenizer.json": "d9512ae8928ce3e5bdf72e00f8618601974bab0afadb8fc08c09354f2327b187",
+    "manifest.json": "5bd1726c65a9a5b66075159676925e67fa5810231fd57bd43bc768c7507f435a"
+  },
+  "sft_manifest": {
+    "dataset": "HuggingFaceTB/smol-smoltalk",
+    "revision": "f73fe857d519ff6ac5af2ea67c4d3834da7b8bcc",
+    "chat_format": "macoder-chat-v1",
+    "tokenizer_sha256": "d9512ae8928ce3e5bdf72e00f8618601974bab0afadb8fc08c09354f2327b187",
+    "counts": {
+      "valid": 1318,
+      "test": 825,
+      "train": 165450
+    },
+    "sources": {
+      "valid/smol-summarize-20k": 66,
+      "valid/smol-magpie-ultra-short": 274,
+      "valid/everyday-conversations": 11,
+      "valid/self-oss-instruct": 208,
+      "valid/smol-contraints": 130,
+      "valid/openhermes-50k": 181,
+      "valid/smollm-rewrite-30k": 106,
+      "valid/smol-summarize-5k": 13,
+      "valid/explore-instruct-rewrite": 11,
+      "test/self-oss-instruct": 91,
+      "test/smol-magpie-ultra-short": 160,
+      "test/smollm-rewrite-30k": 50,
+      "test/openhermes-50k": 93,
+      "test/smol-contraints": 57,
+      "test/smol-summarize-20k": 29,
+      "test/explore-instruct-rewrite": 10,
+      "test/smol-summarize-5k": 5,
+      "test/everyday-conversations": 5,
+      "train/smol-magpie-ultra-short": 47562,
+      "train/smol-contraints": 19284,
+      "train/self-oss-instruct": 28516,
+      "train/smollm-rewrite-30k": 15527,
+      "train/openhermes-50k": 25814,
+      "train/smol-summarize-20k": 9270,
+      "train/explore-instruct-rewrite": 1748,
+      "train/smol-summarize-5k": 1055,
+      "train/everyday-conversations": 1224,
+      "train/verified_calculator": 15450,
+      "valid/verified_calculator": 318,
+      "test/verified_calculator": 325
+    },
+    "buckets": {
+      "train": {
+        "256": {
+          "examples": 58504,
+          "actual_input_tokens": 9108412,
+          "assistant_targets": 4296530
+        },
+        "512": {
+          "examples": 47990,
+          "actual_input_tokens": 17216804,
+          "assistant_targets": 10032434
+        },
+        "1024": {
+          "examples": 58956,
+          "actual_input_tokens": 46601081,
+          "assistant_targets": 36860110
+        }
+      },
+      "valid": {
+        "256": {
+          "examples": 613,
+          "actual_input_tokens": 83229,
+          "assistant_targets": 36013
+        },
+        "512": {
+          "examples": 333,
+          "actual_input_tokens": 120630,
+          "assistant_targets": 69049
+        },
+        "1024": {
+          "examples": 372,
+          "actual_input_tokens": 295095,
+          "assistant_targets": 230729
+        }
+      },
+      "test": {
+        "256": {
+          "examples": 469,
+          "actual_input_tokens": 57188,
+          "assistant_targets": 22093
+        },
+        "512": {
+          "examples": 165,
+          "actual_input_tokens": 59742,
+          "assistant_targets": 35321
+        },
+        "1024": {
+          "examples": 191,
+          "actual_input_tokens": 151884,
+          "assistant_targets": 124302
+        }
+      }
+    },
+    "array_hashes": {
+      "train-256-ids.npy": "93bb4d2a8e38edc44b5228ce828eb5ea1e41b7add43c8458f9baff20e67daf5d",
+      "valid-256-ids.npy": "100bc071f766d6fc8ca174a2e5b6f0cabe5afbfdc43ea02361675cbf402a18b0",
+      "train-512-mask.npy": "0ec1e21f8d24e02d0c7fb80798d459331049ae673b6a92209728f819dbe38e6f",
+      "train-256-mask.npy": "ffbc579286d661af2239f60bdbfdbebb2bd05dc4da51ea17f52d9dcc2897167b",
+      "test-1024-ids.npy": "28203ac541d3897a77ca3379110ed11d1f55bc4507ba34581db5b4c9fb1335e9",
+      "test-1024-mask.npy": "d981d6d88e5305b206cbbe46be7cd4129662a7c53bd4f0607241c4038f2cdc36",
+      "valid-512-ids.npy": "7cf074d53ced4361e9c4a16a38ca338375b093a6a80b66f8c28cbb7353249379",
+      "train-512-ids.npy": "0f40e45c697131f6478a040fb24d9ecafe4fca84eeaaabe64ebeb681ed20ac99",
+      "train-1024-mask.npy": "d538c92863f98d6b1404dc5e319ca952ca1f303a32e0a9bd87fc6f13e8d36d53",
+      "valid-1024-mask.npy": "267cac8be06b590d422b701229da56ffb34f2db9d87cfbe46f2de1d51b6d001a",
+      "valid-1024-ids.npy": "a207bff9dbd96784ee5550d641f63aaf754b77b4ca7d32f223a792f47c3f6368",
+      "test-512-ids.npy": "3219d09a606671e2f77015ad9de0751eba5030867adb128634d0917354fa1d51",
+      "test-256-mask.npy": "4693047888de9a41982ec6bbe995a6afd4bb1adbc9ee70f3b1a26c956864832a",
+      "train-1024-ids.npy": "f5cbcba3ab7e240125a72afb3a0da3e7b2da1583ed30fc9a5525a44ddfb5d942",
+      "test-512-mask.npy": "ce31d77512c64663785c7d7865269f6c1429c41b1051fcd38dfc9be13f0fae89",
+      "valid-256-mask.npy": "890f2faeab39238ac9f9b7d58915c08bffe321bf0b786345ff56ba37abeb7529",
+      "valid-512-mask.npy": "668d12a4bcd6cc0b0903765f26008dba18c0366b68bad72412233d689661dc09",
+      "test-256-ids.npy": "8e4c198e5c4d7a3eb3f71ed8ec43b96a48a14c66ebc9f743cd53348cb66b2348"
+    },
+    "jsonl_hashes": {
+      "train": "7791c5777587617daf1ede5942592c0d8fc7f87769d9ae1d97d2acfd7a8b2a0d",
+      "valid": "e85206cd106a587e5ee2039250728f4651f9f1862122d33594a829f9387eb775",
+      "test": "1625b03db3aefb140585160a9812286efcd93b206110325c2d4403dda6ed3f2a"
+    },
+    "selection": "First 150K unique prompt groups with complete conversations <=1025 tokens; no response truncation",
+    "split": "Official test prefix split into 1000 development and 500 final examples; exact user-prompt groups excluded from train. Calculator split by prompt hash.",
+    "decontamination": "Same 13-word HumanEval/MBPP exclusion filter for SmolTalk; not exhaustive semantic decontamination",
+    "benchmark_filter_sha256": "f558339b1eafceeacc3397edcfb717d6220c86b61e6aaac837f979ca12e01371"
+  },
+  "prepare_general_sha256": "2873b7a2e267e50b988e6bb0e19d042de7eb7851139155c224bb787e8c22ea3c",
+  "prepare_sft_sha256": "ea4dbab220c709949570a534bf9666dbf73257604423d6515aa3800a0bf41dfb"
+}
