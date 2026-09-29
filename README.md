@@ -1,10 +1,8 @@
 # agimac
 
-**Train a language model from scratch on your Mac.**
+**Train language models from scratch on Apple silicon or Modal GPUs, then run them locally with MLX.**
 
-Train with native Apple-silicon MLX, or use a Modal GPU and bring the weights home. Choose your model size, corpus size and training budget. Includes a live training dashboard, chat CLI, calculator tools and reproducible evaluations.
-
-This is a learning/research project, not a dependable coding assistant. Our 145M model passes **11/164 HumanEval problems**. The failures are documented alongside the successes.
+A complete toolkit with a live training dashboard, chat CLI, calculator tools and reproducible evaluations.
 
 ![Architecture](assets/architecture.png)
 
@@ -131,3 +129,7 @@ The CORE protocol helpers and chat-evaluation formatting/scoring also use or ada
   year = {2026}
 }
 ```
+
+## License
+
+MIT. See [LICENSE](LICENSE). Third-party attribution is retained in [experiments/nanochat-LICENSE.txt](experiments/nanochat-LICENSE.txt).
